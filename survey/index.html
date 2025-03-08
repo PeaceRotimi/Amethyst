@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="page-content">
-      <h1>Find Your Dream Home Survey</h1>
+      <h1 class="survey-title">Find Your Dream Home Survey</h1>
       <div class="survey-container">
         <div class="question" id="question1">
           <p>What type of property are you looking for?</p>
@@ -37,17 +37,19 @@
         </div>
 
         <div class="question" id="question2">
-          <p>What is your budget range?</p>
-          <input type="radio" name="budget-range" value="1500" />
-          £0-£1500/month<br />
-          <input type="radio" name="budget-range" value="3000" />
-          £1500-£3000/month<br />
-          <input type="radio" name="budget-range" value="5000" />
-          £3000-£5000/month<br />
-          <input type="radio" name="budget-range" value="8000" />
-          £5000-£8000/month<br />
-          <input type="radio" name="budget-range" value="8000+" />
-          £8000+/month<br />
+          <p>What is your budget price?</p>
+          <input type="radio" name="price" value="-100000" />
+          Below £100,000<br />
+          <input type="radio" name="price" value="200000" />
+          £100,000-£200,000<br />
+          <input type="radio" name="price" value="300000" />
+          £200,000-£300,000<br />
+          <input type="radio" name="budget-range" value="500000" />
+          £300,000-£500,000/month<br />
+          <input type="radio" name="budget-range" value="750000" />
+          £500,000-£750,000<br />
+          <input type="radio" name="budget-range" value="750000+" />
+          £750,000+<br />
         </div>
 
         <div class="question" id="question3">
