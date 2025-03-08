@@ -157,6 +157,7 @@ button {
 .btn-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .survey-btn,
@@ -252,3 +253,6 @@ input {
 }
 
 /* HOUSE SWIPER PAGE  */
+.swiper-nav-btn + .swiper-nav-btn {
+  margin-left: 20px;
+}
