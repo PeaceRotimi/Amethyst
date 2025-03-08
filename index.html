@@ -19,15 +19,25 @@
     <title>House Hunter</title>
   </head>
   <body>
+    <!-- Initial home page when user starts  -->
     <div id="home-content">
       <div id="logo-container">
         <div class="logo-img">
           <img src="" alt="House Hunter logo" />
         </div>
         <h1 class="app-name">House Hunter</h1>
-        <h2 class="slogan">Swipe. Match. Move. House Hunting, Gamified!</h2>
+        <h2 class="slogan">
+          Swipe. Match. Move. <br />House Hunting, Gamified!
+        </h2>
       </div>
-      <button class="home-cta-btn">Get Started!</button>
+      <button class="home-cta-btn" onclick="goToNextPage()">
+        Get Started!
+      </button>
     </div>
+    <script>
+      function goToNextPage() {
+        window.location.href = "survey/index.html"; // Redirect to another page
+      }
+    </script>
   </body>
 </html>

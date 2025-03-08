@@ -83,12 +83,7 @@
           <button class="survey-btn" id="nextBtn" onclick="move(1)">
             Next
           </button>
-          <button
-            class="survey-btn"
-            id="finishBtn"
-            onclick="finishSurvey()"
-            style="display: none"
-          >
+          <button class="survey-btn" id="finishBtn" onclick="finishSurvey()">
             Finish
           </button>
         </div>
@@ -115,7 +110,9 @@
           }
 
           function finishSurvey() {
-            alert("Survey Completed! Thank you for your responses.");
+            alert(
+              "Survey Completed! Thank you for your responses. Loading properties..."
+            );
             // You can add logic here to submit the survey or process the answers.
           }
           // Initial setup
