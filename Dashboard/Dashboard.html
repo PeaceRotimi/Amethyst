@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="Dash.css" />
-  </head>
-  <body class="darkmode">
-    <nav class="main-menu">
-      <div>
-        <div class="user-info">
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e5a707f4-d5ac-4f30-afd8-4961ae353dbc"
-            alt="user"
-          />
-          <p>Mia Taylor</p>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="board.css">
+
+</head>
+<body>
+    <main>
+      <nav class="main-menu">
+        <h1>Hello Helly R!</h1>
         <ul>
           <li class="nav-item active">
+            <b></b>
+            <b></b>
+            <a href="#">
+              <i class="fa fa-house nav-icon"></i>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <b></b>
+            <b></b>
             <a href="#">
               <i class="fa fa-user nav-icon"></i>
               <span class="nav-text">Profile</span>
@@ -25,750 +33,249 @@
           </li>
 
           <li class="nav-item">
+            <b></b>
+            <b></b>
             <a href="#">
-              <i class="fa fa-map nav-icon"></i>
-              <span class="nav-text">Discover</span>
+              <i class="fa fa-calendar-check nav-icon"></i>
+              <span class="nav-text">Schedule</span>
             </a>
           </li>
 
           <li class="nav-item">
+            <b></b>
+            <b></b>
             <a href="#">
-              <i class="fa fa-arrow-trend-up nav-icon"></i>
-              <span class="nav-text">Trending</span>
+              <i class="fa fa-person-running nav-icon"></i>
+              <span class="nav-text">Activities</span>
             </a>
           </li>
 
           <li class="nav-item">
+            <b></b>
+            <b></b>
             <a href="#">
-              <i class="fa-solid fa-chart-simple nav-icon"></i>
-              <span class="nav-text">Analytics</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#">
-              <i class="fa fa-heart nav-icon"></i>
-              <span class="nav-text">Favorites</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#">
-              <i class="fa-solid fa-pen-to-square nav-icon"></i>
-              <span class="nav-text">Reviews</span>
+              <i class="fa fa-sliders nav-icon"></i>
+              <span class="nav-text">Settings</span>
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
 
-      <ul>
-        <li class="nav-item">
-          <a href="#">
-            <i class="fa fa-gear nav-icon"></i>
-            <span class="nav-text">Settings</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="#">
-            <i class="fa fa-right-from-bracket nav-icon"></i>
-            <span class="nav-text">Logout</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <section class="content">
-      <div class="left-content">
-        <div class="search-and-check">
-          <form class="search-box">
-            <input type="text" placeholder="Search event..." />
-            <i class="bx bx-search"></i>
-          </form>
-          <div class="interaction-control-mobile interactions">
-            <i class="fa-regular fa-envelope notified"></i>
-            <i class="fa-regular fa-bell notified"></i>
-            <div class="toggle" onclick="switchTheme()">
-              <div class="mode-icon moon">
-                <i class="bx bxs-moon"></i>
+      <section class="content">
+        <div class="left-content">
+          <div class="activities">
+            <h1>Houses</h1>
+            <div class="activity-container">
+              <div class="image-container img-one">
+                <img src="https://images.timesproperty.com/blog/2053/unnamed___2022_04_28T194445453.png" alt="flat" />
+                <div class="overlay">
+                  <h3>Flat</h3>
+                </div>
               </div>
-              <div class="mode-icon sun hidden">
-                <i class="bx bxs-sun"></i>
+
+              <div class="image-container img-two">
+                <img src="https://www.belvoir.co.uk/wp-content/uploads/2024/01/Cottage-in-the-UK-1.jpg" alt="cottage" />
+                <div class="overlay">
+                  <h3>Cottage</h3>
+                </div>
+              </div>
+
+              <div class="image-container img-three">
+                <img src="https://lid.zoocdn.com/645/430/f32bbd13ab58b7604fc591ce5d3ff1f777dc5515.jpg" alt="bungalow house" />
+                <div class="overlay">
+                  <h3>Bungalow</h3>
+                </div>
+              </div>
+
+              <div class="image-container img-four">
+                <img src="https://lid.zoocdn.com/645/430/0440fb8c0f1c515776dfa5e76dd845757f430a32.jpg" alt="terrance" />
+                <div class="overlay">
+                  <h3>Terrance</h3>
+                </div>
+              </div>
+
+              <div class="image-container img-five">
+                <img src="https://lid.zoocdn.com/645/430/de308cec68b1ef6648453320e935804f410f9ed4.jpg" alt="detached house" />
+                <div class="overlay">
+                  <h3>Detached</h3>
+                </div>
+              </div>
+
+              <div class="image-container img-six">
+                <img src="https://lid.zoocdn.com/u/1024/768/735c16e5a858592f77e8480aef57e07006d51c7d.jpg" alt="semi-detached house" />
+                <div class="overlay">
+                  <h3>Semi-detached</h3>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="header">
-          <picture class="morning-img hidden">
-            <img
-              class="header-mobile"
-              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b4f4845f-4dc7-4470-b81a-677f46f211c2"
-              alt=""
-            />
-            <img
-              class="header-tablet"
-              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/8add6e87-577d-44cb-a7bb-18f0e4bd2163"
-              alt=""
-            />
-            <img
-              class="header-desktop"
-              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/cce4084a-01a4-428d-961f-935bafe7a6e3"
-              alt=""
-            />
-          </picture>
+          <div class="left-bottom">
+            <div class="weekly-schedule">
+              <h1>Weekly Schedule</h1>
+              <div class="calendar">
+                <div class="day-and-activity activity-one">
+                  <div class="day">
+                    <h1>13</h1>
+                    <p>thu</p>
+                  </div>
+                  <div class="activity">
+                    <h2>Flat Viewing</h2>
+                    <div class="participants">
+                      <img src="https://pbs.twimg.com/profile_images/1883898520966414336/m5ZI6Kb2_400x400.jpg" style="--i: 1" alt="" />
+                    
+                    </div>
+                  </div>
+                
+                </div>
 
-          <picture class="night-img">
-            <img
-              class="header-mobile"
-              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e349d3c2-ee2c-4982-866e-776236508fc9"
-              alt=""
-            />
-            <img
-              class="header-tablet"
-              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/1266c923-a1d3-441a-bbb6-2dc6663b1f8b"
-              alt=""
-            />
-            <img
-              class="header-desktop"
-              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/91011799-2b47-457d-9e11-65fe38a105d0"
-              alt=""
-            />
-          </picture>
-        </div>
+                <div class="day-and-activity activity-two">
+                  <div class="day">
+                    <h1>28</h1>
+                    <p>fri</p>
+                  </div>
+                  <div class="activity">
+                    <h2>Cottage Viewing</h2>
+                    <div class="participants">
+                      <img src="https://preview.redd.it/favorite-irving-quote-v0-0iv1ie8ny2ac1.jpeg?auto=webp&s=5493f0080090bbb7f485f7e8f7d805dffc42fc79" style="--i: 1" alt="" />
+                     
+                    </div>
+                  </div>
+                
+                </div>
 
-        <div class="upcoming-events">
-          <h1>Upcoming Events</h1>
-          <div class="event-container">
-            <div class="card event-card">
-              <div class="event-header">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/697ef286-1104-4c6c-91d6-0b2a1e04009b"
-                  alt=""
-                />
-                <p>March 19, 8:00 PM</p>
-                <i class="bx bx-heart like-btn"></i>
-              </div>
-              <div class="event-content">
-                <h2>Acoustic Serenade Under the Stars</h2>
-                <p>Skyline Amphitheater</p>
-              </div>
-              <div class="event-footer">
-                <p style="background-color: #e48e2c">Concert</p>
-                <div class="btn-group">
-                  <button>Buy Ticket</button>
-                  <div class="share">
-                    <button class="share-btn">
-                      <i class="fa-solid fa-share"></i>
-                    </button>
-                    <ul class="popup">
-                      <li>
-                        <a href="#" style="color: rgb(79, 153, 213)"
-                          ><i class="bx bxl-twitter"></i
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#" style="color: rgb(34, 173, 34)"
-                          ><i class="bx bxl-whatsapp"></i
-                        ></a>
-                      </li>
-                    </ul>
+                <div class="day-and-activity activity-three">
+                  <div class="day">
+                    <h1>1</h1>
+                    <p>tue</p>
+                  </div>
+                  <div class="activity">
+                    <h2>Terrance Viewing</h2>
+                    <div class="participants">
+                      <img src="https://i.pinimg.com/736x/b1/c1/ca/b1c1ca3203ba9adf11b9382fa97b4628.jpg" style="--i: 1" alt="" />
+                     
+                    </div>
+                  </div>
+                
+                </div>
+
+                <div class="day-and-activity activity-four">
+                  <div class="day">
+                    <h1>5</h1>
+                    <p>sat</p>
+                  </div>
+                  <div class="activity">
+                    <h2>Flat Viewing</h2>
+                    <div class="participants">
+                      <img src="data:image/jpeg;base64,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" style="--i: 1" alt="" />
+                     
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="card event-card">
-              <div class="event-header">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/19cc9b1d-0dd6-4e4e-ab5c-1d9efd443953"
-                  alt=""
-                />
-                <p>March 22, 8:00 PM</p>
-                <i class="bx bxs-heart like-btn"></i>
-              </div>
-              <div class="event-content">
-                <h2>Latin Rhythms Fusion</h2>
-                <p>Dance Studio X</p>
-              </div>
-              <div class="event-footer">
-                <p style="background-color: #582bac">Workshop</p>
-                <div class="btn-group">
-                  <button>Buy Ticket</button>
-                  <div class="share">
-                    <button class="share-btn">
-                      <i class="fa-solid fa-share"></i>
-                    </button>
-                    <ul class="popup">
-                      <li>
-                        <a href="#" style="color: rgb(79, 153, 213)"
-                          ><i class="bx bxl-twitter"></i
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#" style="color: rgb(34, 173, 34)"
-                          ><i class="bx bxl-whatsapp"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
+            <div class="personal-bests">
+              <h1>Personal Goals</h1>
+              <div class="personal-bests-container">
+                <div class="best-item box-one">
+                  <p>Rooms: 4</p>
+                  <i class="fa-solid fa-house"></i>
                 </div>
-              </div>
-            </div>
-
-            <div class="card event-card">
-              <div class="event-header">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/34203989-4778-4e9a-8537-d42c073a458d"
-                  alt=""
-                />
-                <p>March 26, 10:00 PM</p>
-                <i class="bx bx-heart like-btn"></i>
-              </div>
-              <div class="event-content">
-                <h2>Jazz Fusion Night</h2>
-                <p>Jazz Haven Lounge</p>
-              </div>
-              <div class="event-footer">
-                <p style="background-color: #e48e2c">Concert</p>
-                <div class="btn-group">
-                  <button>Buy Ticket</button>
-                  <div class="share">
-                    <button class="share-btn">
-                      <i class="fa-solid fa-share"></i>
-                    </button>
-                    <ul class="popup">
-                      <li>
-                        <a href="#" style="color: rgb(79, 153, 213)"
-                          ><i class="bx bxl-twitter"></i
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#" style="color: rgb(34, 173, 34)"
-                          ><i class="bx bxl-whatsapp"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
+                <div class="best-item box-two">
+                  <p>Price: £300 - £650</p>
+                  <i class="fa-solid fa-money-bills"></i>
                 </div>
-              </div>
-            </div>
-
-            <div class="card event-card">
-              <div class="event-header">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/3990b1bd-f34d-4fda-bfc9-d807d9e2f0f6"
-                  alt=""
-                />
-                <p>March 28, 3:00 PM</p>
-                <i class="bx bx-heart like-btn"></i>
-              </div>
-              <div class="event-content">
-                <h2>Clay Sculpting Class</h2>
-                <p>Artisan Workshop Space</p>
-              </div>
-              <div class="event-footer">
-                <p style="background-color: #582bac">Workshop</p>
-                <div class="btn-group">
-                  <button>Buy Ticket</button>
-                  <div class="share">
-                    <button class="share-btn">
-                      <i class="fa-solid fa-share"></i>
-                    </button>
-                    <ul class="popup">
-                      <li>
-                        <a href="#" style="color: rgb(79, 153, 213)"
-                          ><i class="bx bxl-twitter"></i
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#" style="color: rgb(34, 173, 34)"
-                          ><i class="bx bxl-whatsapp"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card event-card">
-              <div class="event-header">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/35bab020-129e-4858-9ce7-076f804fdcc5"
-                  alt=""
-                />
-                <p>April 4, 8:30 PM</p>
-                <i class="bx bx-heart like-btn"></i>
-              </div>
-              <div class="event-content">
-                <h2>Timeless Tales Revived</h2>
-                <p>Epoch Theater</p>
-              </div>
-              <div class="event-footer">
-                <p style="background-color: #b31a4d">Theatre</p>
-                <div class="btn-group">
-                  <button>Buy Ticket</button>
-                  <div class="share">
-                    <button class="share-btn">
-                      <i class="fa-solid fa-share"></i>
-                    </button>
-                    <ul class="popup">
-                      <li>
-                        <a href="#" style="color: rgb(79, 153, 213)"
-                          ><i class="bx bxl-twitter"></i
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#" style="color: rgb(34, 173, 34)"
-                          ><i class="bx bxl-whatsapp"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card event-card">
-              <div class="event-header">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/13b71f3a-4fe3-4d95-8f83-1bd5722f5108"
-                  alt=""
-                />
-                <p>April 5, 6:45 PM</p>
-                <i class="bx bx-heart like-btn"></i>
-              </div>
-              <div class="event-content">
-                <h2>Abstract Art Class</h2>
-                <p>Artistic Horizon Studio</p>
-              </div>
-              <div class="event-footer">
-                <p style="background-color: #582bac">Workshop</p>
-                <div class="btn-group">
-                  <button>Buy Ticket</button>
-                  <div class="share">
-                    <button class="share-btn">
-                      <i class="fa-solid fa-share"></i>
-                    </button>
-                    <ul class="popup">
-                      <li>
-                        <a href="#" style="color: rgb(79, 153, 213)"
-                          ><i class="bx bxl-twitter"></i
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#" style="color: rgb(34, 173, 34)"
-                          ><i class="bx bxl-whatsapp"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card event-card">
-              <div class="event-header">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/566017c5-9b68-4b35-a14f-5d04d43fa408"
-                  alt=""
-                />
-                <p>April 6, 9:00 PM</p>
-                <i class="bx bxs-heart like-btn"></i>
-              </div>
-              <div class="event-content">
-                <h2>Harry Potter Film Concert Series</h2>
-                <p>Overture Hall</p>
-              </div>
-              <div class="event-footer">
-                <p style="background-color: #e48e2c">Concert</p>
-                <div class="btn-group">
-                  <button>Buy Ticket</button>
-                  <div class="share">
-                    <button class="share-btn">
-                      <i class="fa-solid fa-share"></i>
-                    </button>
-                    <ul class="popup">
-                      <li>
-                        <a href="#" style="color: rgb(79, 153, 213)"
-                          ><i class="bx bxl-twitter"></i
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#" style="color: rgb(34, 173, 34)"
-                          ><i class="bx bxl-whatsapp"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card event-card">
-              <div class="event-header">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/ab202ffd-b0ee-43ee-befb-870fa509cc17"
-                  alt=""
-                />
-                <p>Jun 23, 1:30 PM</p>
-                <i class="bx bx-heart like-btn"></i>
-              </div>
-              <div class="event-content">
-                <h2>Wimbledon Championships - 2024</h2>
-                <p>Tennis & Croquet Club</p>
-              </div>
-              <div class="event-footer">
-                <p style="background-color: #4a920f">Sport</p>
-                <div class="btn-group">
-                  <button>Buy Ticket</button>
-                  <div class="share">
-                    <button class="share-btn">
-                      <i class="fa-solid fa-share"></i>
-                    </button>
-                    <ul class="popup">
-                      <li>
-                        <a href="#" style="color: rgb(79, 153, 213)"
-                          ><i class="bx bxl-twitter"></i
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#" style="color: rgb(34, 173, 34)"
-                          ><i class="bx bxl-whatsapp"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
+                <div class="best-item box-three">
+                  <p>Garden,Parking/Garage</p>
+                  <i class="fa-solid fa-car"></i>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="reviews">
-          <h1>Past Event Reviews</h1>
-          <div class="review-container">
-            <div class="card review-card">
-              <h2>Metal Sculpture Workshop</h2>
-              <div class="ratings">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bx-star"></i>
-                <i class="bx bx-star"></i>
-              </div>
-              <p>
-                The metal sculpture workshop was a bit tough because shaping the
-                metal was harder than expected. It would have been better with
-                simpler instructions on how to mold the material.
-              </p>
+        <div class="right-content">
+          <div class="user-info">
+            <div class="icon-container">
+              <i class="fa fa-bell nav-icon"></i>
+              <i class="fa fa-message nav-icon"></i>
             </div>
+            <h4>Helly R</h4>
+            <img src="https://pbs.twimg.com/media/GkmBBWnWcAEWTyl.jpg" alt="user" />
+          </div>
 
-            <div class="card review-card">
-              <h2>Electro Groove Night</h2>
-              <div class="ratings">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star-half"></i>
+          <div class="active-calories">
+            <h1 style="align-self: flex-start">Dream house</h1>
+            <div class="active-calories-container">
+              <div class="box" style="--i: 75%">
+                <div class="circle">
+                  <h2>75<small>%</small></h2>
+                </div>
               </div>
-              <p>
-                The Electro Groove Night was so much fun! The music was awesome,
-                and everyone had a great time dancing – a fantastic night out
-                for sure!
-              </p>
+              <div class="calories-content">
+                <p><span>You are so close!</span></p>
+                
+              </div>
             </div>
+          </div>
 
-            <div class="card review-card">
-              <h2>Wimbledon Championships - 2023 (Final)</h2>
-              <div class="ratings">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
+          <div class="mobile-personal-bests">
+            <h1>Personal goals</h1>
+            <div class="personal-bests-container">
+              <div class="best-item box-one">
+                <p>Rooms: 4</p>
+                <i class="fa-solid fa-house"></i>
               </div>
-              <p>
-                Watching the Wimbledon final between Novak Djokovic and Carlos
-                Alcaraz was so exciting! The intense match and incredible skills
-                of the players made it a thrilling experience that I'll always
-                remember.
-              </p>
+              <div class="best-item box-two">
+                <p>Price: £300 - £650</p>
+                <i class="fa-solid fa-money-bills"></i>
+              </div>
+              <div class="best-item box-three">
+                <p>Garden,Parking/Garage</p>
+                <i class="fa-solid fa-car"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="friends-activity">
+            <h1>Friends Activity</h1>
+            <div class="card-container">
+              <div class="card">
+                <div class="card-user-info">
+                  <img src="https://preview.redd.it/favorite-irving-quote-v0-0iv1ie8ny2ac1.jpeg?auto=webp&s=5493f0080090bbb7f485f7e8f7d805dffc42fc79" alt="" />
+                  <h2>Irving B</h2>
+                </div>
+                <img class="card-img" src="https://hips.hearstapps.com/hmg-prod/images/zegna-presents-john-turturro-a-family-thread-10-67a274a265d83.jpg?crop=0.5625xw:1xh;center,top&resize=980:*" alt="User post" />
+                <p>I just got a new Home!🎉</p>
+              </div>
+
+              <div class="card card-two">
+                <div class="card-user-info">
+                  <img src="https://pbs.twimg.com/profile_images/1883898520966414336/m5ZI6Kb2_400x400.jpg" alt="user" />
+                  <h2>Mr Milchick</h2>
+                </div>
+                <img class="card-img" src="https://pyxis.nymag.com/v1/imgs/1f5/b5a/c527a4cac600a8435768e249b7ea1c1f33-25007.rhorizontal.w700.jpg" alt="" />
+                <p>New Flat available</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="right-content">
-        <div class="interaction-control interactions">
-          <i class="fa-regular fa-envelope notified"></i>
-          <i class="fa-regular fa-bell notified"></i>
-          <div class="toggle" onclick="switchTheme()">
-            <div class="mode-icon moon">
-              <i class="bx bxs-moon"></i>
-            </div>
-            <div class="mode-icon sun hidden">
-              <i class="bx bxs-sun"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="analytics">
-          <h1>Analytics</h1>
-          <div class="analytics-container">
-            <div class="total-events">
-              <div class="event-number card">
-                <h2>Past Events</h2>
-                <p>20</p>
-                <i class="bx bx-check-circle"></i>
-              </div>
-              <div class="event-number card">
-                <h2>Upcoming Events</h2>
-                <p>3</p>
-                <i class="bx bx-timer"></i>
-              </div>
-            </div>
-
-            <div class="chart" id="doughnut-chart">
-              <h2>Distribution of Attended Events</h2>
-              <canvas id="doughnut"></canvas>
-              <ul></ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="contacts">
-          <h1>Contacts</h1>
-          <div class="contacts-container">
-            <div class="contact-status">
-              <div class="contact-activity">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e56800db-687d-4d0e-a470-51e37a4431c7"
-                  alt=""
-                />
-                <p>Matt favored <span>Jazz Fusion Night</span></p>
-              </div>
-              <small>1 hour ago</small>
-            </div>
-
-            <div class="contact-status">
-              <div class="contact-activity">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/fac9f27b-c1ea-4bba-973f-88996322fa2d"
-                  alt=""
-                />
-                <p>
-                  Bella bought a ticket for
-                  <span>Acoustic Serenade Under the Stars</span>
-                </p>
-              </div>
-              <small>4 hours ago</small>
-            </div>
-
-            <div class="contact-status">
-              <div class="contact-activity">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/1499d73c-ccc0-41a1-b530-1d629012aebd"
-                  alt=""
-                />
-                <p>
-                  Lucas bought a ticket for
-                  <span>Wimbledon Championships - 2024</span>
-                </p>
-              </div>
-              <small>1 day ago</small>
-            </div>
-
-            <div class="contact-status">
-              <div class="contact-activity">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/949768d4-0196-486c-b386-edb47ddd54c2"
-                  alt=""
-                />
-                <p>
-                  Sophia favored
-                  <span>Clay Sculpting Class</span>
-                </p>
-              </div>
-              <small>1 day ago</small>
-            </div>
-
-            <div class="contact-status">
-              <div class="contact-activity">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/8a470b8b-b5cf-4189-b36e-f22551997ff4"
-                  alt=""
-                />
-                <p>
-                  Kate bought a ticket for
-                  <span>Latin Rhythms Fusion</span>
-                </p>
-              </div>
-              <small>3 day ago</small>
-            </div>
-
-            <div class="contact-status">
-              <div class="contact-activity">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7740acc0-3f86-4c28-8a8c-5ae67c343edb"
-                  alt=""
-                />
-                <p>
-                  Ben favored
-                  <span>Harry Potter Film Concert Series</span>
-                </p>
-              </div>
-              <small>6 day ago</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <script>
-      const navItems = document.querySelectorAll(".nav-item");
+        const navItems = document.querySelectorAll(".nav-item");
 
-      navItems.forEach((navItem, i) => {
-        navItem.addEventListener("click", () => {
-          navItems.forEach((item, j) => {
-            item.className = "nav-item";
-          });
-          navItem.className = "nav-item active";
-        });
-      });
+navItems.forEach((navItem, i) => {
+  navItem.addEventListener("click", () => {
+    navItems.forEach((item, j) => {
+      item.className = "nav-item";
+    });
+    navItem.className = "nav-item active";
+  });
+});
 
-      //! Light/Dark Mode
-
-      const moonIcon = document.querySelector(".moon");
-      const sunIcon = document.querySelector(".sun");
-      const nightImage = document.querySelector(".night-img");
-      const morningImage = document.querySelector(".morning-img");
-      const toggle = document.querySelector(".toggle");
-
-      function switchTheme() {
-        document.body.classList.toggle("darkmode");
-        if (document.body.classList.contains("darkmode")) {
-          sunIcon.classList.remove("hidden");
-          moonIcon.classList.add("hidden");
-          morningImage.classList.add("hidden");
-          nightImage.classList.remove("hidden");
-        } else {
-          sunIcon.classList.add("hidden");
-          moonIcon.classList.remove("hidden");
-          morningImage.classList.remove("hidden");
-          nightImage.classList.add("hidden");
-        }
-      }
-
-      //! Share Button Popup
-
-      const sharebtns = document.querySelectorAll(".share-btn");
-
-      sharebtns.forEach((btn) => {
-        btn.addEventListener("click", (event) => {
-          const popup = btn.closest(".event-footer").querySelector(".popup");
-
-          btn.classList.toggle("active");
-          popup.classList.toggle("active");
-
-          event.stopPropagation();
-        });
-      });
-
-      document.addEventListener("click", (event) => {
-        const popups = document.querySelectorAll(".popup");
-
-        popups.forEach((popup) => {
-          if (
-            popup.classList.contains("active") &&
-            !popup.contains(event.target)
-          ) {
-            popup.classList.remove("active");
-
-            const shareBtn = popup
-              .closest(".event-footer")
-              .querySelector(".share-btn");
-            shareBtn.classList.remove("active");
-          }
-        });
-      });
-
-      //! Like Buttons
-
-      const likeBtns = document.querySelectorAll(".like-btn");
-
-      likeBtns.forEach((likeBtn) => {
-        likeBtn.addEventListener("click", () => {
-          if (likeBtn.classList.contains("bxs-heart")) {
-            likeBtn.classList.remove("bxs-heart");
-            likeBtn.classList.add("bx-heart");
-            likeBtn.classList.remove("bounce-in");
-          } else {
-            likeBtn.classList.add("bxs-heart");
-            likeBtn.classList.remove("bx-heart");
-            likeBtn.classList.add("bounce-in");
-          }
-        });
-      });
-
-      //! Chart JS
-
-      const chartData = {
-        labels: ["Workshop", "Theater", "Concert", "Sport"],
-        data: [40, 15, 25, 20],
-      };
-
-      const chart = document.getElementById("doughnut");
-      const eventList = document.querySelector(".chart ul");
-
-      new Chart(chart, {
-        type: "doughnut",
-        data: {
-          labels: ["Workshop", "Theater", "Concert", "Sport"],
-          datasets: [
-            {
-              label: "# of Events",
-              data: [8, 3, 5, 4],
-              backgroundColor: ["#582bac", "#b31a4d", "#e48e2c", "#4a920f"],
-              offset: 10,
-              hoverOffset: 8,
-              hoverBorderColor: "#9a999b",
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              display: true,
-              labels: {
-                color: "#8b8a96",
-                font: {
-                  size: 12,
-                  weight: 600,
-                },
-              },
-            },
-          },
-          layout: {
-            padding: {
-              bottom: 10,
-            },
-          },
-        },
-      });
-
-      function population() {
-        chartData.labels.forEach((label, i) => {
-          let eachEvent = document.createElement("li");
-          eachEvent.innerHTML = `${label}: <span class="percentage">${chartData.data[i]}%</span> `;
-          eventList.appendChild(eachEvent);
-        });
-      }
-
-      population();
     </script>
   </body>
-</html>
+  </html>
+  
