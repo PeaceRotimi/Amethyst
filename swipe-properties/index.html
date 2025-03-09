@@ -4,25 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Swipe to Find Your Dream Home</title>
   </head>
   <body>
-    <div class="card-container">
-      <div class="btn-container swiper-nav">
-        <button
-          class="swiper-nav-btn swiper-dashboard-btn"
-          onclick="toDashboard()"
-        >
-          Dashboard
-        </button>
-        <button
-          class="swiper-nav-btn swiper-nav-btn"
-          onlick="toLikedProperties()"
-        >
-          Liked Properties
-        </button>
+    <h1 class="swiper-title">Swipe to begin the home hunt!</h1>
+    <div id="swiper">
+      <div class="card" style="--i: 0">
+        <img src="" alt="" />
+      </div>
+      <div class="card" style="--i: 1">
+        <img src="" alt="" />
+      </div>
+      <div class="card" style="--i: 2">
+        <img src="" alt="" />
+      </div>
+      <div class="card" style="--i: 3">
+        <img src="" alt="" />
       </div>
     </div>
+    <div class="btn-container swiper-nav">
+      <button
+        class="swiper-nav-btn swiper-dashboard-btn"
+        onclick="toDashboard()"
+      >
+        Dashboard
+      </button>
+      <button
+        class="swiper-nav-btn swiper-liked-btn"
+        onclick="toLikedProperties()"
+      >
+        Liked Properties
+      </button>
+    </div>
+
     <script>
       function toDashboard() {
         window.location.href = "../Dashboard/Dashboard.html";
@@ -31,6 +55,86 @@
       function toLikedProperties() {
         window.location.href = "../liked-properties/index.html";
       }
+
+      // swiper card logic
+      document.addEventListener("DOMContentLoaded", () => {
+        const swiper = document.getElementById("swiper");
+        const cards = document.querySelectorAll(".card");
+        let swipedRight = []; // Stores liked properties
+        let swipedLeft = []; // Stores disliked properties
+        let startX = 0;
+        let currentCard = null;
+
+        function handleTouchStart(e) {
+          startX = e.touches[0].clientX;
+          currentCard = e.currentTarget;
+        }
+
+        function handleTouchMove(e) {
+          if (!currentCard) return;
+          let moveX = e.touches[0].clientX - startX;
+          currentCard.style.transform = `translateX(${moveX}px) rotate(${
+            moveX / 10
+          }deg)`;
+        }
+
+        function handleTouchEnd(e) {
+          if (!currentCard) return;
+          let moveX = e.changedTouches[0].clientX - startX;
+
+          if (moveX > 100) {
+            // Swiped Right (Liked)
+            swipedRight.push(currentCard.querySelector("img").src);
+            swipeCard("right");
+          } else if (moveX < -100) {
+            // Swiped Left (Disliked)
+            swipedLeft.push(currentCard.querySelector("img").src);
+            swipeCard("left");
+          } else {
+            // Reset position if no significant swipe
+            currentCard.style.transition = "transform 0.3s";
+            currentCard.style.transform = "translateX(0) rotate(0)";
+            setTimeout(() => {
+              currentCard.style.transition = "";
+            }, 300);
+          }
+        }
+
+        function swipeCard(direction) {
+          if (!currentCard) return;
+
+          currentCard.style.transition = "transform 0.5s, opacity 0.5s";
+          currentCard.style.transform = `translateX(${
+            direction === "right" ? "100vw" : "-100vw"
+          }) rotate(${direction === "right" ? "30deg" : "-30deg"})`;
+          currentCard.style.opacity = "0";
+
+          setTimeout(() => {
+            currentCard.remove();
+            updateCardStack();
+          }, 500);
+        }
+
+        function updateCardStack() {
+          const remainingCards = document.querySelectorAll(".card");
+          remainingCards.forEach((card, index) => {
+            card.style.setProperty("--i", index);
+          });
+        }
+
+        // Attach event listeners to each card
+        cards.forEach((card) => {
+          card.addEventListener("touchstart", handleTouchStart);
+          card.addEventListener("touchmove", handleTouchMove);
+          card.addEventListener("touchend", handleTouchEnd);
+        });
+
+        // Navigation to Liked Properties Page
+        function toLikedProperties() {
+          localStorage.setItem("likedProperties", JSON.stringify(swipedRight));
+          window.location.href = "../liked-properties/index.html";
+        }
+      });
     </script>
   </body>
 </html>
