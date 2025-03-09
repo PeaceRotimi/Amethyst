@@ -9,10 +9,28 @@
   <body>
     <div class="card-container">
       <div class="btn-container swiper-nav">
-        <button class="swiper-nav-btn">Dashboard</button>
-        <button class="swiper-nav-btn">Liked Properties</button>
+        <button
+          class="swiper-nav-btn swiper-dashboard-btn"
+          onclick="toDashboard()"
+        >
+          Dashboard
+        </button>
+        <button
+          class="swiper-nav-btn swiper-nav-btn"
+          onlick="toLikedProperties()"
+        >
+          Liked Properties
+        </button>
       </div>
     </div>
-    <script></script>
+    <script>
+      function toDashboard() {
+        window.location.href = "../Dashboard/Dashboard.html";
+      }
+
+      function toLikedProperties() {
+        window.location.href = "../liked-properties/index.html";
+      }
+    </script>
   </body>
 </html>

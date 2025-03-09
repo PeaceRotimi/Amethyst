@@ -37,6 +37,10 @@ body {
   /* background: #212140; */
 }
 
+img {
+  max-width: 100%;
+}
+
 /* MAIN MENU */
 
 main {

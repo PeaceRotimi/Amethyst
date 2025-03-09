@@ -90,19 +90,9 @@ button {
   cursor: pointer;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-  transition: all 0.3s ease-in-out;
-}
-
 .home-cta-btn:hover {
   transform: scale(1.05);
   border-color: #fff9;
-}
-
-.home-cta-btn:hover .icon {
-  transform: translate(4px);
 }
 
 .home-cta-btn:hover::before {
@@ -177,25 +167,14 @@ button {
   cursor: pointer;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-  transition: all 0.3s ease-in-out;
-}
-
 .survey-btn:hover,
-.swiper-nav-btn {
+.swiper-nav-btn:hover {
   transform: scale(1.05);
   border-color: #fff9;
 }
 
-.survey-btn:hover .icon,
-.swiper-nav-btn:hover .icon {
-  transform: translate(4px);
-}
-
 .survey-btn:hover::before,
-.swiper-nav-btn::before {
+.swiper-nav-btn:hover::before {
   animation: shine 1.5s ease-out infinite;
 }
 
@@ -253,6 +232,7 @@ input {
 }
 
 /* HOUSE SWIPER PAGE  */
-.swiper-nav-btn + .swiper-nav-btn {
+.swiper-nav-btn + .swiper-nav-btn,
+.survey-btn + .survey-btn {
   margin-left: 20px;
 }
