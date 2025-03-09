@@ -35,6 +35,9 @@
       function toSwiperPage() {
         window.location.href = "../swipe-properties/index.html";
       }
+      function toDashboard() {
+        window.location.href = "../Dashboard/Dashboard.html";
+      }
 
       document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById("liked-properties-container");
@@ -63,7 +66,7 @@
           chatButton.classList.add("chat-btn");
           chatButton.innerText = "Chat";
           chatButton.addEventListener("click", () => {
-            alert("Chat feature coming soon!"); // Replace with actual chat functionality
+            window.location.href = "../chat/chat.html";
           });
 
           const bookButton = document.createElement("button");
