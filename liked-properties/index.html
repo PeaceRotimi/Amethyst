@@ -24,7 +24,10 @@
       <button class="swiper-nav-btn" onclick="toSwiperPage()">
         View more properties
       </button>
-      <button class="swiper-nav-btn swiper-dashboard-btn" onclick="window.location.href='../Dashboard/Dashboard.html'">
+      <button
+        class="swiper-nav-btn swiper-dashboard-btn"
+        onclick="window.location.href='../Dashboard/Dashboard.html'"
+      >
         Go to Dashboard
       </button>
     </div>
@@ -70,7 +73,7 @@
           bookButton.classList.add("book-btn");
           bookButton.innerText = "Book Visit";
           bookButton.addEventListener("click", () => {
-            alert("Booking feature coming soon!"); // Replace with actual booking functionality
+            window.location.href = "../booking-system/index.html";
           });
 
           buttonContainer.appendChild(chatButton);
