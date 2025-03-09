@@ -17,8 +17,8 @@
     <title>Liked Homes - Next Steps</title>
   </head>
   <body>
-    <h1>Liked Properties</h1>
-    <div class="liked-properties-container"></div>
+    <h1 class="liked-properties-h1">Liked Properties</h1>
+    <div id="liked-properties-container"></div>
 
     <div class="btn-container swiper-nav">
       <button class="swiper-nav-btn" onclick="toSwiperPage()">
@@ -32,6 +32,52 @@
       function toSwiperPage() {
         window.location.href = "../swipe-properties/index.html";
       }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("liked-properties-container");
+
+        // Retrieve liked properties from localStorage
+        let likedProperties =
+          JSON.parse(localStorage.getItem("likedProperties")) || [];
+
+        if (likedProperties.length === 0) {
+          container.innerHTML = "<p>No properties liked yet.</p>";
+          return;
+        }
+
+        likedProperties.forEach((imgSrc) => {
+          const card = document.createElement("div");
+          card.classList.add("property-card");
+
+          const img = document.createElement("img");
+          img.src = imgSrc;
+          img.alt = "Liked Property";
+
+          const buttonContainer = document.createElement("div");
+          buttonContainer.classList.add("card-buttons");
+
+          const chatButton = document.createElement("button");
+          chatButton.classList.add("chat-btn");
+          chatButton.innerText = "Chat";
+          chatButton.addEventListener("click", () => {
+            alert("Chat feature coming soon!"); // Replace with actual chat functionality
+          });
+
+          const bookButton = document.createElement("button");
+          bookButton.classList.add("book-btn");
+          bookButton.innerText = "Book Visit";
+          bookButton.addEventListener("click", () => {
+            alert("Booking feature coming soon!"); // Replace with actual booking functionality
+          });
+
+          buttonContainer.appendChild(chatButton);
+          buttonContainer.appendChild(bookButton);
+
+          card.appendChild(img);
+          card.appendChild(buttonContainer);
+          container.appendChild(card);
+        });
+      });
     </script>
   </body>
 </html>
