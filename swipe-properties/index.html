@@ -92,7 +92,12 @@
           if (moveX > 100) {
             // Swiped Right (Liked)
             swipedRight.push(currentCard.querySelector("img").src);
+            localStorage.setItem(
+              "likedProperties",
+              JSON.stringify(swipedRight)
+            ); // ✅ Store in localStorage
             swipeCard("right");
+            console.log(swipedRight);
           } else if (moveX < -100) {
             // Swiped Left (Disliked)
             swipedLeft.push(currentCard.querySelector("img").src);
